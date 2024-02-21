@@ -1,28 +1,26 @@
 # Capistrano::ZeitwerkCheck
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/capistrano/zeitwerk_check`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem runs `bin/rails zeitwerk:check` before all Capistrano tasks, to avoids NameError on production.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'capistrano-zeitwerk_check'
+gem 'capistrano-zeitwerk_check', git: "https://github.com/socioart/capistrano-zeitwerk_check", tag: "v0.1.0"
 ```
 
 And then execute:
 
     $ bundle install
 
-Or install it yourself as:
-
-    $ gem install capistrano-zeitwerk_check
-
 ## Usage
 
-TODO: Write usage instructions here
+in Capfile add following line.
+
+
+    require "capistrano/zeitwerk_check"
+
 
 ## Development
 
