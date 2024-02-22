@@ -18,9 +18,11 @@ And then execute:
 
 in Capfile add following line.
 
-
     require "capistrano/zeitwerk_check"
 
+If you want to skip check, please set `skip_zeitwerk_check` variable to `true`.
+
+    set :skip_zeitwerk_check, true
 
 ## Development
 
